@@ -10,6 +10,7 @@
 
 <body>
 <div class="container">
+
     <a href="lang.php?l=rus"><img src="img/rus.png" width="64" height="64"></a>
     <a href="lang.php?l=eng"><img src="img/usa.png" width="64" height="64"></a>
 
@@ -22,7 +23,7 @@
 
         <br />
         <input type="submit" class="submit" id="process" value="<?=$language[$cl]['continue'];?>">
-        <input type="button" class="submit" value="<?=$language[$cl]['register'];?>" onclick="location.replace('index.php')">
+        <input type="button" class="submit" value="<?=$language[$cl]['register'];?>" onclick="location.replace('register.php')">
         <br />
         <span class="validate_error" id="error_summary"></span>
     </form>

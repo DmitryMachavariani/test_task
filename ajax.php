@@ -123,7 +123,7 @@ if(isset($_POST) && $_POST['type'] == 'login'){
 
     if(count($errors) == 0){
         $_SESSION['email'] = $email;
-        $_SESSION['password'] = $result['password'];
+        $_SESSION['password'] = $password;
         $date = time();
 
         mysqli_query($connect, "UPDATE tb_users SET date_last = '{$date}' WHERE email = '{$email}'");
