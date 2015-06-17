@@ -1,0 +1,52 @@
+.container{
+	margin : 0px auto;
+	width  : 300px;
+	border : 0px solid black;
+	text-align: center;
+}
+
+.field{
+	min-width     : 200px;
+	width         : auto;
+	height        : 35px;
+	margin-top    : 15px;
+	border        : 1px solid lightgray;
+	border-radius : 3px;
+}
+
+.submit{
+	border-radius    : 5px;
+	font-size        : 18px;
+	color            : #FFFFFF;
+	padding          : 10px 10px 10px 10px;
+	background-color : #2BD611;
+	border           : 0;
+}
+
+.error{
+	background-color : lightpink;
+	border           : 1px solid lightgray;
+}
+
+.validate_error{
+	font-size : 10px;
+	color     : #FF0000;
+}
+
+.button{
+	border-radius    : 3px;
+	font-size        : 18px;
+	color            : #FFFFFF;
+	padding          : 5px 5px 5px 5px;
+	background-color : goldenrod;
+	border           : 0;
+}
+
+.notactive{
+	border-radius    : 5px;
+	font-size        : 18px;
+	color            : gray;
+	padding          : 10px 10px 10px 10px;
+	background-color : lightgrey;
+	border           : 0;
+}
