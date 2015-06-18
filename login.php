@@ -64,6 +64,7 @@
         }
 
         if(errors == 0){
+            document.getElementById("error_summary").innerHTML = "";
             try{
                 var http = new XMLHttpRequest();
                 http.open("POST", "ajax.php", true);

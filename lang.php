@@ -18,7 +18,10 @@ $language = [
         'login'=>'Войти',
         'register'=>'Регистрация',
         'success'=>'Успешно зарегистрировались. Ваш пароль: ',
-        'success_login'=>'Успешно вошли'
+        'success_login'=>'Успешно вошли',
+        'email_exist'=>'Пользователь с таким email уже присутствует в проекте',
+        'user_not_found'=>'Пользователь с таким email не существует',
+        'incorrect_password'=>'Неверный пароль'
     ],
     'eng'=>[
         'firstname'=>'Your name',
@@ -36,7 +39,10 @@ $language = [
         'login'=>'Login',
         'register'=>'Register',
         'success'=>'Successfully registered. Your password: ',
-        'success_login'=>'Successfully login'
+        'success_login'=>'Successfully login',
+        'email_exist'=>'A user with this email already exists in the project',
+        'user_not_found'=>'A user with this email exists',
+        'incorrect_password'=>'Incorrect password'
     ]
 ];
 

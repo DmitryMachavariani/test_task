@@ -73,6 +73,11 @@ if(isset($_POST) && $_POST["type"] == "register"){
         array_push($errors, $language[$cl]['lenght_error']);
     }
 
+    $query = mysqli_query($connect, "SELECT * FROM tb_users WHERE email = '{$email}'");
+    if(mysqli_num_rows($query) > 0){
+        array_push($errors, $language[$cl]['email_exist']);
+    }
+
     if(isset($_FILES["avatar"])){
         $uploaddir = "avatar/";
         $filename = generateName($_FILES["avatar"]["type"]);
@@ -112,13 +117,15 @@ if(isset($_POST) && $_POST['type'] == 'login'){
         array_push($errors, $language[$cl]['empty_field']);
     }
 
-    $query = mysqli_query($connect, "SELECT * FROM tb_users WHERE email = {$email}");
+    $query = mysqli_query($connect, "SELECT * FROM tb_users WHERE email = '{$email}'");
     if(mysqli_num_rows($query) > 0){
         $result = mysqli_fetch_assoc($query);
 
         if(!password_verify($password, $result['password'])){
-            array_push($errors, $language[$cl]['error_password']);
+            array_push($errors, $language[$cl]['incorrect_password']);
         }
+    }else{
+        array_push($errors, $language[$cl]['user_not_found']);
     }
 
     if(count($errors) == 0){
