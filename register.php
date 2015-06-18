@@ -42,6 +42,8 @@
 <script>
     var errors = 0;
     document.getElementById("process").onclick = function(){
+        document.getElementById("error_summary").innerHTML = "";
+
         var form = document.forms[0];
 
         var firstname = form.elements["firstname"].value;
@@ -112,7 +114,6 @@
         }
 
         if(errors == 0){
-            document.getElementById("error_summary").innerHTML = "";
             try{
                 var http = new XMLHttpRequest();
                 http.open('POST', 'ajax.php', true);
